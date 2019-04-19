@@ -1,0 +1,12 @@
+<p data-sly-test.edit="${wcmmode.edit}" data-emptytext="List Title" class="cq-placeholder"></p>
+<div data-sly-use.listTitle="edu.ttn.templates.demo.core.models.ListTitleModel">
+    <div class="container">
+
+        <div class="${edit ? '' : 'hidden-xs hidden-sm'}"
+             data-sly-resource="${ @path='columnControl', resourceType='dynamic-templates-demo/components/content/columncontrol' }"></div>
+
+        <sly data-sly-test="${!edit}" data-sly-use.templates="mobile-title-list-template.html"
+             data-sly-call="${templates.mobileTitleList @ listTitle = listTitle}"></sly>
+
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<sly data-sly-use.header="edu.ttn.templates.demo.core.models.HeaderModel"/>
+<sly data-sly-test.value="${(wcmmode.edit) ? 'position:static' : ''}"/>
+<header id="header" style="${value @context='html'}"> 
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="${header.logoURL @ extension='html'}"><img
+                        width="85" height="72"
+                        src="/etc.clientlibs/dynamic-templates-demo/clientlibs/clientlib-site/resources/images/demo.jpeg"
+                        alt="Demo" /></a>
+                <p class="navbar-text">
+                    <span>|</span> ${header.siteName}
+                </p>
+            </div>
+            <div class="collapse navbar-collapse yui-skin-sam">
+                <form class="navbar-form navbar-left hidden-xs" name="searchform" method="get"
+                      action="${header.searchURL @ extension='html'}">
+                    <div class="form-group">
+                        <input data-sly-test.search="${'Search' @ i18n, locale=pageProperties.jcr:language}"
+                               type="search"/><span class='search-icon'><a href="javascript:void(0);" class="clear-form reveal-after-expand"></a></span>
+
+                    </div>
+                    <button type="submit" class="btn btn-default hidden header-submit">Submit</button>
+                </form>
+            </div> 
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+</header>

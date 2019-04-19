@@ -1,0 +1,9 @@
+<template data-sly-template.mobileTitleList="${@ listTitle}">
+    <div class="row visible-xs visible-sm">
+        <div class="col-sm-12">
+            <ul data-sly-test.resourcePropertiesMapForList="${listTitle.resourcePropertiesMapForList}" data-sly-list.resourcePropertiesMap="${resourcePropertiesMapForList}">
+                <li>${resourcePropertiesMapForList[resourcePropertiesMap].title}</li>
+            </ul>
+        </div>
+    </div>
+</template>
